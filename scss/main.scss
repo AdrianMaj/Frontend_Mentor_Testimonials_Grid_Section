@@ -1,0 +1,102 @@
+@use './colors' as *;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+:root {
+	font-size: 62.5%;
+}
+body {
+	font-family: 'Barlow Semi Condensed', sans-serif;
+	font-size: 1.3rem;
+	background-color: $lightgrayishblue;
+}
+.wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+.cards {
+	padding: 4em 2em;
+	.card {
+		//GENERAL
+		padding: 2em 2.5em;
+		overflow: hidden;
+		border-radius: 8px;
+		&__white-text {
+			color: $lightgrayishblue;
+		}
+		&__black-text {
+			color: $grayishblue;
+		}
+		&__author {
+			display: flex;
+			align-items: center;
+			margin-bottom: 1em;
+		}
+		&__author-photo {
+			border-radius: 50%;
+			width: 2.8em;
+			border: 2px solid transparent;
+			margin-right: 1em;
+		}
+		&__border {
+			border: 2px solid $lightviolet;
+		}
+		&__author-name {
+			font-weight: 600;
+			font-size: 1.4rem;
+		}
+		&__author-status {
+			font-size: 1.2rem;
+			opacity: 50%;
+		}
+		&__text-heading {
+			font-weight: 600;
+			margin-bottom: 1em;
+			padding-right: 0.15em;
+		}
+		&__text-paragraph {
+			padding-right: 1.2em;
+			margin-bottom: 1em;
+			font-weight: 400;
+			line-height: 1.4em;
+			opacity: 70%;
+		}
+		// FOR SELECTED CARDS
+		&__content {
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-template-rows: auto;
+			gap: 2em;
+		}
+		&__purple {
+			grid-row: 1/2;
+			background-color: $violet;
+			background-image: url('../images/bg-pattern-quotation.svg');
+			background-size: 8.2em;
+			background-repeat: no-repeat;
+			background-position: 90% 0;
+		}
+		&__lightgray {
+			grid-row: 2/3;
+			background-color: $grayishblue;
+		}
+		&__white {
+			grid-row: 3/4;
+			background-color: $white;
+		}
+		&__black {
+			grid-row: 4/5;
+			background-color: $blackishblue;
+		}
+		&__white-long {
+			grid-row: 5/6;
+			background-color: $white;
+		}
+	}
+}
+.attribution {
+	text-align: center;
+	margin-bottom: 1em;
+}
