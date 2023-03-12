@@ -1,4 +1,5 @@
 @use './colors' as *;
+@use './large' as *;
 * {
 	margin: 0;
 	padding: 0;
@@ -28,6 +29,7 @@ body {
 		}
 		&__black-text {
 			color: $grayishblue;
+			box-shadow: 0px 26px 97px -27px rgba(169, 169, 169, 1);
 		}
 		&__author {
 			display: flex;
